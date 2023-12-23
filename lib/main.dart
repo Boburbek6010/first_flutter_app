@@ -5,6 +5,8 @@ import 'package:first_flutter_app/pages/splash_page.dart';
 import 'package:first_flutter_app/pages/third_page.dart';
 import 'package:flutter/material.dart';
 
+import 'learn_textfield_dialog/pages/login_page.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -20,10 +22,9 @@ class MyApp extends StatelessWidget{
         useMaterial3: false,
       ),
       title: "First Flutter App",
-      initialRoute: HomePage.id,
-      // home: const FirstPage(),
-      // navigatorObservers: [MyNavigationListener()],
+      initialRoute: LoginPage.id,
       routes: {
+        LoginPage.id: (context) => const LoginPage(),
         HomePage.id: (context) => const HomePage(),
         SplashPage.id: (context) => const SplashPage(),
         "first": (context) => const FirstPage(),
